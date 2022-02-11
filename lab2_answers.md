@@ -1,4 +1,4 @@
-Lab
+# Lab2
 
 ## Q4
 
@@ -10,9 +10,9 @@ d. IMDB, id
 ## Q6
 
 theaters(_name_, capactiy)  
-movies(_IMDB_, title, year, run_time)  
+movies(_IMDB_, title, production_year, run_time)  
 performances(_p_id_, /imdb/, /t_name/, start_time, start_date)  
-tickets(_id_, /p_id/, /user_name/)  
+tickets(_t_id_, /p_id/, /user_name/)  
 customers(_user_name_, full_name, password) 
 
 ## Q7

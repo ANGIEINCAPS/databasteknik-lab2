@@ -34,11 +34,11 @@ CREATE TABLE performances (
 
 DROP TABLE IF EXISTS tickets;
 CREATE TABLE tickets (
-   ticket_id TEXT DEFAULT (lower(hex(randomblob(16)))),
+   t_id TEXT DEFAULT (lower(hex(randomblob(16)))),
    
    p_id TEXT,
    user_name TEXT,
-   PRIMARY KEY(ticket_id),
+   PRIMARY KEY(t_id),
    FOREIGN KEY (p_id) REFERENCES performances (p_id),
    FOREIGN KEY (user_name) REFERENCES customers (user_name)
 );
@@ -76,9 +76,5 @@ VALUES ('13:00', '2022-02-11', '034256', 'Södran'),
                                    
 INSERT 
 INTO customers (user_name, full_name, password)
-VALUES ('4NGIEinCAP5', 'Angelica Larsson', 'an7061la-s'),
-       ('cerealkiller1337', 'Märta Holmquist', 'ma7061ho-s');
-
-INSERT
-INTO tickets (p_id, user_name)
-VALUES ('c972ad3788214c530e95a88680a8d62b', '4NGIEinCAP5');
+VALUES ('working925', 'Angelica Larsson', 'an7061la-s'),
+       ('klockanE1337', 'Märta Holmquist', 'ma7061ho-s');
